@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #aul {
+            width: 400px;
+            height: 300px;
+            border: 1px solid greenyellow;
+        }
+    </style>
+</head>
+<body>
+ <ul id="aul"></ul>
+<span id="asp">小明:</span>
+ <input type="text" id="ain">
+<button>发送</button>
+
+
+</body>
+<script>
+    var aUl=document.getElementById("aul")
+    var aSp=document.getElementById("asp")
+    var aText=document.getElementById("ain")
+    var aBut=document.getElementsByTagName("button")[0]
+    aText.focus()
+    aBut.onclick=function(){
+        aUl.innerHTML= aUl.innerHTML+"<li>"+aSp.innerHTML+aText.value+"</li>"
+        aText.focus()
+        aText.value=""
+    }
+    aSp.onclick=function(){
+        if(this.innerHTML=="小明:"){
+            this.innerHTML="小马:"
+        }else{
+            this.innerHTML="小明:"
+        }
+    }
+
+
+</script>
+</html>
